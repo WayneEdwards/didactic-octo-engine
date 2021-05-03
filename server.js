@@ -1,4 +1,4 @@
-const { notes } = require('./db/db.json')
+const { notes } = require('./Develop/db/db.json')
 
 const fs = require('fs');
 const path = require('path');
@@ -20,7 +20,7 @@ function updateNote(id, notesArray, body) {
         if (body.title) notesArray[id].title = body.title;
         if (body.text) notesArray[id].text = body, text;
         fs.writeFileSync(
-            path.join(__dirname, './db/db.json'),
+            path.join(__dirname, './Develop//db/db.json'),
             JSON.stringify({ notes: notesArray }, null, 2)
         )
     }
@@ -31,7 +31,7 @@ function createNewNote(body, notesArray) {
     const note = body;
     notesArray.push(note);
     fs.writeFileSync(
-        path.join(__dirname, './db/db.json'),
+        path.join(__dirname, './Develop/db/db.json'),
         JSON.stringify({ notes, notesArray }, null, 2)
     );
     return note;
@@ -53,11 +53,11 @@ function filterbyQuery(query, notesArray) {
 
 
 app.get('/notes', (req, res) => {
-    res.sendFile(path.join(__dirname, './public/notes.html'));
+    res.sendFile(path.join(__dirname, './Develop/public/notes.html'));
 });
 
 app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, './public/index.html'));
+    res.sendFile(path.join(__dirname, './Develop/public/index.html'));
 })
 
 app.get('/api/notes', (req, res) => {
