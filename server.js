@@ -1,10 +1,9 @@
-const { notes } = require('./Develop/db/db.json')
-
+const express = require('express');
 const fs = require('fs');
 const path = require('path');
 
-// start express.js server
-const express = require('express');
+
+
 const app = express();
 const PORT = process.env.PORT || 3001;
 
