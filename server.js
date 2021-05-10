@@ -13,14 +13,14 @@ app.use(express.urlencoded({ extended: true }));
 // parse incoming JSON data
 app.use(express.json());
 
-app.use(express.static('public'));
+app.use(express.static('./Develop/public'));
 
 function updateNote(id, notesArray, body) {
     if (notesArray[id]) {
         if (body.title) notesArray[id].title = body.title;
         if (body.text) notesArray[id].text = body, text;
         fs.writeFileSync(
-            path.join(__dirname, './Develop//db/db.json'),
+            path.join(__dirname, './Develop/db/db.json'),
             JSON.stringify({ notes: notesArray }, null, 2)
         )
     }
