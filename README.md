@@ -13,6 +13,15 @@ localhost3001 and writes notes and stores them in a json file.
 Type 'npm install' at the root directory. In the CLI terminal.
 
 ## Website
+Heroku: https://rocky-dusk-58415.herokuapp.com/
+
+## Screenshot
+images\Note Taker screenshot.png
+
+## Credits
+Wayne Edwards (myself)
+And so mamy others!
+
 
 
 
