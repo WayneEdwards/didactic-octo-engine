@@ -7,8 +7,23 @@
     },
     {
       "title": "Morning Run",
-      "text": "Three Miles",
+      "text": "Three Miles\n",
       "id": "1"
+    },
+    {
+      "title": "Clean and Organize Kitchen ",
+      "text": "Cabinets and drawers",
+      "id": "2"
+    },
+    {
+      "title": "Read Old Emails",
+      "text": "Yahoo and Gmail",
+      "id": "3"
+    },
+    {
+      "title": "Call The Family",
+      "text": "Call brother and the nephews.",
+      "id": "4"
     }
   ]
 }
