@@ -17,6 +17,8 @@ Heroku: https://rocky-dusk-58415.herokuapp.com/
 
 ## Screenshot
 images\Note Taker screenshot.png
+![Note Taker screenshot](https://user-images.githubusercontent.com/71949043/118379060-cc25a480-b58c-11eb-9f6b-3d47012838e1.png)
+
 
 ## Credits
 Wayne Edwards (myself)
