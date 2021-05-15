@@ -25,13 +25,16 @@ const hide = (elem) => {
 // activeNote is used to keep track of the note in the textarea
 let activeNote = {};
 
-const getNotes = () =>
+const getNotes = () => {
+    console.log('222222');
     fetch('/api/notes', {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
         },
+
     });
+}
 
 const saveNote = (note) =>
     fetch('/api/notes', {
@@ -79,7 +82,7 @@ const handleNoteSave = () => {
 
 // Delete the clicked note
 const handleNoteDelete = (e) => {
-    // prevents the click listener for the list from being called when the button inside of it is clicked
+    // Prevents the click listener for the list from being called when the button inside of it is clicked
     e.stopPropagation();
 
     const note = e.target;
@@ -131,6 +134,7 @@ const renderNoteList = async(notes) => {
         liEl.classList.add('list-group-item');
 
         const spanEl = document.createElement('span');
+        spanEl.classList.add('list-item-title');
         spanEl.innerText = text;
         spanEl.addEventListener('click', handleNoteView);
 
@@ -170,7 +174,9 @@ const renderNoteList = async(notes) => {
 };
 
 // Gets notes from the db and renders them to the sidebar
-const getAndRenderNotes = () => getNotes().then(renderNoteList);
+const getAndRenderNotes = () =>
+    console.log('1111111111111');
+getNotes().then(renderNoteList);
 
 if (window.location.pathname === '/notes') {
     saveNoteBtn.addEventListener('click', handleNoteSave);

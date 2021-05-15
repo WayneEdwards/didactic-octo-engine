@@ -14,6 +14,10 @@ app.use(express.json());
 
 app.use(express.static('./Develop/public'));
 
+function readNotes() {
+    return fs.readFile(path.join(__dirname, './Develop/db/db.json'))
+}
+
 function updateNote(id, notesArray, body) {
     if (notesArray[id]) {
         if (body.title) notesArray[id].title = body.title;
@@ -52,6 +56,7 @@ function filterbyQuery(query, notesArray) {
 
 
 app.get('/notes', (req, res) => {
+    console.log('hello!');
     res.sendFile(path.join(__dirname, './Develop/public/notes.html'));
 });
 
@@ -60,10 +65,14 @@ app.get('*', (req, res) => {
 })
 
 app.get('/api/notes', (req, res) => {
-    let results = notes;
-    if (req.query) {
-        results = filterbyQuery(req.query, results);
-    }
+    console.log('hi');
+
+    let results = JSON.parse(readNotes());
+
+    console.log(results);
+    // if (req.query) {
+    //     results = filterbyQuery(req.query, results);
+    // } 
     res.json(results);
 });
 

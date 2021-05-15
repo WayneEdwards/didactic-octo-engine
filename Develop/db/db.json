@@ -1,29 +1,16 @@
-{
-  "notes": [
-    {
-      "id": "0",
-      "title": "Test Title",
-      "text": "Test text"
+[{
+        "id": "0",
+        "title": "Test Title",
+        "text": "Test text"
     },
     {
-      "id": "1",
-      "title": "Test Title",
-      "text": "Test text2"
+        "id": "1",
+        "title": "Test Title2",
+        "text": "Test text2"
     },
     {
-      "id": "2",
-      "title": "Test put",
-      "text": "Test put text"
-    },
-    {
-      "title": "Breakfast",
-      "text": "Breakfast with the peeps.\n",
-      "id": "3"
-    },
-    {
-      "title": "Bike Ride",
-      "text": "Bike ride in the morning.",
-      "id": "4"
+        "id": "2",
+        "title": "Test put",
+        "text": "Test put text"
     }
-  ]
-}
+]
