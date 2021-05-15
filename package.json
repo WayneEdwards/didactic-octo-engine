@@ -1,25 +1,25 @@
 {
-  "name": "didactic-octo-engine",
-  "version": "1.0.0",
-  "description": "",
-  "main": "server.js",
-  "dependencies": {
-    "express": "^4.17.1"
-  },
-  "devDependencies": {},
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/WayneEdwards/didactic-octo-engine.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/WayneEdwards/didactic-octo-engine/issues"
-  },
-  "homepage": "https://github.com/WayneEdwards/didactic-octo-engine#readme"
+    "name": "didactic-octo-engine",
+    "version": "1.0.0",
+    "description": "",
+    "main": "server.js",
+    "dependencies": {
+        "express": "^4.17.1"
+    },
+    "devDependencies": {},
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "node server.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/WayneEdwards/didactic-octo-engine.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/WayneEdwards/didactic-octo-engine/issues"
+    },
+    "homepage": "https://github.com/WayneEdwards/didactic-octo-engine#readme"
 }
