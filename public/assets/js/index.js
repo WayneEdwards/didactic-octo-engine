@@ -42,8 +42,8 @@ const saveNote = (note) =>
             'Content-Type': 'application/json',
         },
         body: JSON.stringify(note),
-    });
-
+    })
+console.log(saveNote)
 const deleteNote = (id) =>
     fetch(`/api/notes/${id}`, {
         method: 'DELETE',
@@ -73,7 +73,9 @@ const handleNoteSave = () => {
         title: noteTitle.value,
         text: noteText.value,
     };
-    saveNote(newNote).then(() => {
+    console.log(newNote)
+    saveNote(newNote).then((res) => {
+
         getAndRenderNotes();
         renderActiveNote();
     });
@@ -159,8 +161,8 @@ const renderNoteList = async(notes) => {
     if (jsonNotes.length === 0) {
         noteListItems.push(createLi('No saved Notes', false));
     }
-
-    jsonNotes.forEach((note) => {
+    console.log(jsonNotes)
+    jsonNotes.notes.forEach((note) => {
         const li = createLi(note.title);
         li.dataset.note = JSON.stringify(note);
 

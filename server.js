@@ -4,7 +4,7 @@ const path = require('path');
 const express = require('express');
 const PORT = process.env.PORT || 3001;
 const app = express();
-let notes = require("./db/db.json");
+let db = require("./db/db.json");
 
 // parse incoming string or array data
 app.use(express.urlencoded({ extended: true }));
@@ -73,7 +73,7 @@ app.get('/notes', (req, res) => {
 });
 
 app.get('/api/notes', (req, res) => {
-    let results = notes;
+    let results = db;
     if (req.query) {
         results = filterByQuery(req.query, results);
     }
@@ -81,23 +81,25 @@ app.get('/api/notes', (req, res) => {
 });
 
 app.get('/api/notes/:id', (req, res) => {
-    let result = findById(req.params.id, notes);
+    let result = findById(req.params.id, db.notes);
     res.json(result);
 });
 
 app.post('/api/notes', (req, res) => {
-    req.body.id = notes.length.toString();
-    const note = createNewNote(req.body, notes);
+    req.body.id = db.notes.length.toString();
+
+    const note = createNewNote(req.body, db.notes);
+
     res.json(note);
 });
 
 app.put('/api/notes/:id', (req, res) => {
-    const note = updateNote(req.params.id, notes, req.body);
-    res.json(notes);
+    const note = updateNote(req.params.id, db.notes, req.body);
+    res.json(note);
 });
 
 app.delete('/api/notes/:id', (req, res) => {
-    let key = deleteNote(req.params.id, notes);
+    let key = deleteNote(req.params.id, db.notes);
     console.log(key + ' is deleted');
     res.send(key);
 });

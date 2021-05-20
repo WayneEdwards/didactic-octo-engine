@@ -1,6 +1,18 @@
 {
-    "notes": [{
-        "title": "",
-        "text": ""
-    }]
+  "notes": [
+    {
+      "title": "",
+      "text": ""
+    },
+    {
+      "title": "Dinner",
+      "text": "hi\n",
+      "id": "2"
+    },
+    {
+      "title": "Meeting",
+      "text": "hello",
+      "id": "2"
+    }
+  ]
 }
